@@ -16,15 +16,16 @@ const bookTitle = ["Lord of the Rings", "Programming for Dummies", "Introduction
 let booksObj = {}; 
 
 function convert(keyArr, valueArr){
-    
-    // Add code here
-    /*
-        Tips:
-        - Step 1: Create a local scoped object literal.
-        - Step 2: Define a for-loop that run based on keyArr's length.
-        - Step 3: Within the for-loop, add the key and value to the local scoped object.
-        - Step 4: Write a return statement to return the object literal after the for-loop code block.
-    */
+    newObj = {};
+    if (keyArr.length !== valueArr.length) {
+        return false;
+    }
+
+    for (let i = 0; i < keyArr.length; i++) {
+        newObj[keyArr[i]] = valueArr[i];
+    }
+
+    return newObj;
 }
 
 function printByKey(key){

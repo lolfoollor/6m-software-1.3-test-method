@@ -16,12 +16,17 @@ for(let key in person){
     console.log("key is", key, "and value is", person[key]);
 }
 
+for (const [key, value] of Object.entries(person)) {
+    console.log(key, value);
+}
+
 /*Class discussion
 Break out into groups and discussion what are the following:
     1. Object Destructuring
     2. Template Literals 
 Provide examples for each.
 */
+
 
 /*
 Exercise:
@@ -30,5 +35,14 @@ Exercise:
     b. yearEstablished - Number
     c. isActive - Boolean
     d. coursesOffered - Array containing 3 Strings
+*/
+const school = {
+    name: "Innova Junior College",
+    yearEstablished: 1905,
+    isActive: false,
+    coursesOffered: ["Mathematics", "Chemistry", "English", "PE"]
+};
+/*
 2. Print in the console the following sentence using the "school object" - "Welcome to <name> and we offer <coursesOffered>
 */
+console.log(`Welcome to ${school.name} and we offer ${school.coursesOffered.join(', ')}`)
